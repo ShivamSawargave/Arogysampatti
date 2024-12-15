@@ -20,11 +20,7 @@ const URI = process.env.MongoDBURI;
 
 // connect to mongoDB server
 try {
-    mongoose.connect(URI,  {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      tls: true, // Ensure TLS is enabled
-    });
+    mongoose.connect(URI);
     console.log("connected mongodb");
 } catch (error) {
     console.log("error:",error);
